@@ -5,7 +5,8 @@
 $ python3 reset_ide_2020.py -h
 ```
 
-## Example use
+## Example
+Reset by username `jonh` for ide `datagrip`
 ```
 $ python3 reset_ide_2020.py -u john -n datagrip
 ```

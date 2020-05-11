@@ -37,18 +37,18 @@ def remove_lines_by_pattern(file_name, pattern):
         with open(file_name, 'w') as file:
             file.writelines(updateLines)
 
-parser = argparse.ArgumentParser(description='Reset IDE key')
+parser = argparse.ArgumentParser(description='Reset IDE')
 parser.add_argument(
     '-u', '--username', metavar='U', type=str, required=True,
-    help='username')
+    help='username, that works with ide. This is required!')
 
 parser.add_argument(
     '-n', '--name', metavar='N', type=str, required=False, default='phpstorm',
-    help='ide name, example: phpstorm')
+    help='ide name, default: phpstorm')
 
 args = parser.parse_args()
 username = args.username
-ide_name=args.name
+ide_name = args.name
 
 ide_prefix = ''
 if ide_name == 'clion':
